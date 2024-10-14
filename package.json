@@ -3,10 +3,27 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "serve": "node dist/index.js",
+    "dev": "npx ts-node-dev src/index.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "nitinR9",
   "license": "ISC",
-  "description": "CRUD operations based api for a college login and data management."
+  "description": "CRUD operations based api for a college login and data management.",
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "drizzle-kit": "^0.24.2",
+    "nodemon": "^3.1.7",
+    "ts-node-dev": "^2.0.0"
+  }
 }
