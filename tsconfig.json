@@ -1,17 +1,24 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
         "target": "ES2022",
         "allowJs": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "module": "CommonJS",
-        "moduleResolution": "Node",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "resolveJsonModule": true,
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
     },
+    "include": [
+        "**/*.ts"
+    ],
     "exclude": [
         "node_modules",
     ]
