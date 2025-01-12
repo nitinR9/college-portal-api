@@ -4,7 +4,7 @@ export const users = sqliteTable('users', {
     uId: integer('user_id', { mode: 'number' }).primaryKey({ autoIncrement: true }).notNull(),
     userName: text('user_name', { mode: 'text', length: 10 }).unique().notNull(),
     registrationNo: text('reg_no', { mode: 'text', length: 12 }).unique().notNull(),
-    role: text('text', { mode: 'text', enum: ['student', 'staff', 'admin'] }).notNull()
+    role: text('role', { mode: 'text', enum: ['student', 'staff', 'admin'] }).notNull()
 }, (table) => {
     return {
         userIdx: index('user_idx').on(table.uId, table.userName)
